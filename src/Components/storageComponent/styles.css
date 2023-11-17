@@ -1,4 +1,4 @@
-.mainContainer {
+.storageComponent {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,10 +9,5 @@
     border-radius: 10px;
     padding: 1rem;
     background-color: #776B5D;
-}
 
-input, select, button {
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: .5rem;
 }

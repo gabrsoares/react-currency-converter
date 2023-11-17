@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect } from 'react'
 import { useConversion } from '../../ConversionContext'
-
+import './styles.css'
 interface SecondProps {
     currency: string[]
     currencyRate: number[]
@@ -23,7 +23,7 @@ const SecondCurrency: React.FC<SecondProps> = ({currency, currencyRate, setSecon
 	},[conversion.value])
 
 	return (
-		<div>
+		<div className='secondCurrency'>
 			<label>Para</label>
 			<select onChange={handleChange}>
 				{currency.map((currency, index) => (

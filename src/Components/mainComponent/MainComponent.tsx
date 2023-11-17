@@ -3,6 +3,8 @@ import ConversionContext from '../../ConversionContext'
 import FirstCurrency from '../firstCurrency/FirstCurrency'
 import './styles.css'
 import SecondCurrency from '../secondCurrency/SecondCurrency'
+import StorageContext from '../../StorageContext'
+import StorageComponent from '../storageComponent/StorageComponent'
 
 interface CurrencyApi {
   rates: Record<string, number>
@@ -24,7 +26,6 @@ const MainComponent: React.FC = () => {
 				const rates: number[] = Object.values(result.rates)
 				setCurrency(currencies)
 				setCurrencyRate(rates)
-				console.log(result.rates)
 			})
 	}, [])
 
@@ -45,10 +46,12 @@ const MainComponent: React.FC = () => {
 				<ConversionContext>
 					<SecondCurrency setSecondCurrencyValue={setSecondCurrencyValue} currency={currency} currencyRate={currencyRate} />
 				</ConversionContext>
-
+				<button onClick={handleClick}>Converter</button>
+				<p>{finalValue === 0? null : finalValue}</p>
 			</div>
-			<button onClick={handleClick}>Converter</button>
-			<p>{finalValue}</p>
+			<StorageContext>
+				<StorageComponent finalValue = {finalValue}/>
+			</StorageContext>
 		</div>
 	)
 }

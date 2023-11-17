@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useEffect } from 'react'
 import { useConversion } from '../../ConversionContext'
+import './styles.css'
 
 interface FirstProps {
     currency: string[],
@@ -23,7 +24,7 @@ const FirstCurrency: React.FC<FirstProps> = ({currency, currencyRate, setFirstCu
 	},[conversion.value])
 
 	return (
-		<div>
+		<div className='firstCurrency'>
 			<label>Valor</label>
 			<input type="number" name="moneyValue" onChange={(event) => setMoneyValue(parseFloat(event.target.value))}></input>
 			<label>Converter de</label>
