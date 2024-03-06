@@ -4,9 +4,9 @@ Projeto realizado com o intuito de converter moedas utilizando a API [Fixer](htt
 todas as operações com o LocalStorage.
 
 ## Instalação
-Para instalar o projeto basta utilizar o comando abaixo no console:
+Para instalar o projeto basta utilizar o comando ao lado no console:
 `npm install`
 
 ## Inicialização
-Para inicializar o projeto, basta utilizar o comando abaixo no console:
+Para inicializar o projeto, basta utilizar o comando ao lado no console:
 `npm start`
