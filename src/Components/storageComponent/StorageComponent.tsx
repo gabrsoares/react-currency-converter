@@ -28,7 +28,7 @@ const StorageComponent: React.FC<StorageProps> = ({finalValue}) => {
 
 	return (  
 		<div className='storageComponent'>
-			<button onClick={handleClick}>Exibir resultados passados</button>
+			<button data-testid='resultsButton' id='resultsButton' onClick={handleClick}>Exibir resultados passados</button>
 			{visible && (
 				<div>
 					{storage?.value.map((item, index) => (

@@ -37,7 +37,7 @@ const MainComponent: React.FC = () => {
 	}
 
 	return (
-		<div className="main">
+		<div className="main" data-testid='main-component'>
 			<h1>Conversão de valores</h1>
 			<div className="mainContainer">
 				<ConversionContext>
@@ -47,7 +47,7 @@ const MainComponent: React.FC = () => {
 					<SecondCurrency setSecondCurrencyValue={setSecondCurrencyValue} currency={currency} currencyRate={currencyRate} />
 				</ConversionContext>
 				<button onClick={handleClick}>Converter</button>
-				<p>{finalValue === 0? null : finalValue}</p>
+				<p data-testid='final-value'>{finalValue === 0? null : finalValue}</p>
 			</div>
 			<StorageContext>
 				<StorageComponent finalValue = {finalValue}/>

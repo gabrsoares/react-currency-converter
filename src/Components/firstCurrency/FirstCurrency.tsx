@@ -25,10 +25,10 @@ const FirstCurrency: React.FC<FirstProps> = ({currency, currencyRate, setFirstCu
 
 	return (
 		<div className='firstCurrency'>
-			<label>Valor</label>
-			<input type="number" name="moneyValue" onChange={(event) => setMoneyValue(parseFloat(event.target.value))}></input>
-			<label>Converter de</label>
-			<select onChange={handleChange}>
+			<label htmlFor='moneyValue'>Valor</label>
+			<input type="number" data-testid='moneyValue' id='moneyValue' placeholder="Valor em moeda" name="moneyValue" onChange={(event) => setMoneyValue(parseFloat(event.target.value))}></input>
+			<label  htmlFor='currencySelector'>Converter de</label>
+			<select id='currencySelector' data-testid='currencySelector' onChange={handleChange}>
 				{currency.map((currency, index) => (
 					<option key={index} value={currencyRate[index].toString()}>
 						{currency}

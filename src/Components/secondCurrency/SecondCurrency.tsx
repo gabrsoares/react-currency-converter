@@ -25,7 +25,7 @@ const SecondCurrency: React.FC<SecondProps> = ({currency, currencyRate, setSecon
 	return (
 		<div className='secondCurrency'>
 			<label>Para</label>
-			<select onChange={handleChange}>
+			<select onChange={handleChange} id='secondCurrency' data-testid="secondCurrency">
 				{currency.map((currency, index) => (
 					<option key={index} value={currencyRate[index].toString()}>
 						{currency}
